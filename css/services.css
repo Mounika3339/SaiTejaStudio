@@ -1,0 +1,51 @@
+/* Services page */
+
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+.service-card {
+  background: var(--bg-white); border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow-sm); border: 1px solid var(--border);
+  display: flex; flex-direction: column;
+}
+.service-media { aspect-ratio: 16/10; overflow: hidden; }
+.service-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
+.service-card:hover .service-media img { transform: scale(1.08); }
+.service-body { padding: 32px 28px; display: flex; flex-direction: column; flex: 1; }
+.service-icon {
+  width: 52px; height: 52px; border-radius: 14px; background: var(--bg);
+  display: grid; place-items: center; margin-bottom: 20px;
+}
+.service-icon svg { width: 24px; height: 24px; fill: var(--accent); }
+.service-body h3 { font-family: var(--font-head); font-size: 1.5rem; font-weight: 600; color: var(--dark); margin-bottom: 10px; }
+.service-body > p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 20px; }
+.service-features { margin-bottom: 24px; }
+.service-features li {
+  display: flex; align-items: center; gap: 10px; font-size: 0.85rem;
+  color: var(--text); margin-bottom: 8px;
+}
+.service-features .check {
+  width: 18px; height: 18px; border-radius: 50%; background: var(--bg);
+  flex-shrink: 0; position: relative;
+}
+.service-features .check::after {
+  content: ""; position: absolute; top: 5px; left: 5px;
+  width: 8px; height: 4px; border-left: 1.5px solid var(--accent);
+  border-bottom: 1.5px solid var(--accent); transform: rotate(-45deg);
+}
+.service-price {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding: 16px 0; margin-bottom: 20px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+}
+.price-label { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); }
+.price-amount { font-family: var(--font-head); font-size: 1.8rem; font-weight: 600; color: var(--accent); }
+.service-body .btn { margin-top: auto; }
+
+.cta-section {
+  position: relative; padding: clamp(100px, 14vw, 180px) 0; text-align: center; overflow: hidden;
+  background: url('https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg') center/cover fixed;
+}
+.cta-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(17,17,17,0.7), rgba(17,17,17,0.8)); }
+.cta-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; padding: 0 24px; }
+.cta-title { font-family: var(--font-head); font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 500; color: var(--white); line-height: 1.1; margin-bottom: 24px; }
+.cta-sub { color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-bottom: 40px; }

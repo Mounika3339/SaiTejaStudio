@@ -1,0 +1,42 @@
+/* Contact page */
+
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(32px, 5vw, 64px); align-items: start;
+}
+.contact-card {
+  background: var(--bg-white); border-radius: var(--radius-lg); padding: 40px;
+  margin-bottom: 24px; border: 1px solid var(--border); box-shadow: var(--shadow-sm);
+}
+.contact-card h3 { font-family: var(--font-head); font-size: 1.8rem; font-weight: 600; color: var(--dark); margin-bottom: 24px; }
+.contact-row {
+  display: flex; flex-direction: column; gap: 4px; padding: 14px 0;
+  border-bottom: 1px solid var(--border); font-size: 0.95rem; color: var(--text);
+}
+.contact-row:last-child { border-bottom: none; }
+.contact-row a:hover { color: var(--accent); }
+.contact-label { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); font-weight: 500; }
+.contact-map { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); height: 280px; margin-bottom: 24px; }
+.contact-map iframe { width: 100%; height: 100%; border: 0; }
+.contact-social h4 { font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dark); margin-bottom: 16px; font-weight: 500; }
+.contact-social .footer-social .social-icon { border-color: var(--border); }
+.contact-social .footer-social .social-icon svg { fill: var(--dark); }
+
+.contact-form {
+  background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  padding: clamp(28px, 4vw, 44px); box-shadow: var(--shadow-sm);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-group { margin-bottom: 18px; }
+.form-group label {
+  display: block; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--text); font-weight: 500; margin-bottom: 8px;
+}
+.form-group input, .form-group select, .form-group textarea {
+  width: 100%; padding: 14px 16px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--bg); color: var(--dark); transition: all 0.3s ease; font-weight: 400;
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none; border-color: var(--accent); background: var(--bg-white);
+  box-shadow: 0 0 0 3px rgba(200,155,109,0.12);
+}
+.form-note { margin-top: 14px; font-size: 0.85rem; color: var(--accent); text-align: center; min-height: 1.2em; }
